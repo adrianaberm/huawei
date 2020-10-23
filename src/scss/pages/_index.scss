@@ -1,0 +1,91 @@
+main {
+    overflow: hidden;
+}
+
+.section {
+    &__inner {
+        max-width: 1230px;
+        padding: 0 15px;
+        margin: auto;
+    }
+}
+
+.hero {
+    max-height: 800px;
+    &-content {
+        padding: 50px 20px;
+    }
+
+    &-slider__image {
+        overflow: hidden;
+        
+        img {
+          height: 100%;
+          width: auto;
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+    }
+}
+
+.i-scroll {
+ display: block;
+ font-size: 0;
+
+    &:before {
+        content: "";
+        width: 28px;
+        height: 80px;
+        display: block;
+        background: url(../images/scroll-icon.png) no-repeat;
+    }
+}
+
+
+@include media-query(medium) {
+  .hero {
+      
+
+      &__inner {
+          @include flexbox;
+          @include align-items(flex-end);
+          max-height: 800px;
+          
+      }
+
+      &-content {
+        padding: 50px 40px;
+    }
+
+
+      &-slider-container {
+          max-width: 50%;
+      }
+
+      &-slider__image {
+        
+          img {
+             
+            
+          }
+      }
+  }
+
+}
+
+
+@include media-query(wide) {
+  
+
+}
+
+@include media-query(large) {
+   
+
+}
+
+
+@include media-query(huge) {
+   
+}
